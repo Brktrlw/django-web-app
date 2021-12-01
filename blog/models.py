@@ -2,6 +2,7 @@ from django.db import models
 from autoslug import AutoSlugField
 from ckeditor.fields import RichTextField
 
+
 class ContactModel(models.Model):
     title    = models.CharField(max_length=50,blank=False,null=False)
     name     = models.CharField(max_length=100,blank=False,null=False)
