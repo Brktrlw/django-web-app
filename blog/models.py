@@ -19,7 +19,7 @@ class ContactModel(models.Model):
         return self.title
 
 class KategoriModel(models.Model):
-    title      =models.CharField(max_length=50,verbose_name="Kategori",blank=True,unique=True,default=None)
+    title=models.CharField(max_length=50,verbose_name="Kategori",blank=True,unique=True,default=None)
 
     class Meta:
         verbose_name_plural="Kategoriler"

@@ -1,9 +1,10 @@
 from django.shortcuts import render,HttpResponse
-
+from .models import BlogModel
 
 
 def vPosts(request):
-    return HttpResponse("/Posts")
+    blogs=BlogModel.objects.all()
+    return render(request,"Posts.html",{"blogs":blogs})
 
 def vPostCreate(request):
     return HttpResponse("/Posts/Create/")

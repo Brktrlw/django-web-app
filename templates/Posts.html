@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %} Anasayfa {% endblock title %}
+    {% block head %}
+<link rel="stylesheet" href="{% static 'Posts.css' %}">
+    {% endblock head %}
+{% block body %}
+    {% include 'includes/navbar.html' %}
+{% for blog in blogs %}
+<div style="margin-left:30%;margin-top:3%">
+    <figure class="movie">
+      <div class="movie__hero">
+        <img src="{{blog.images.url}}" alt="Rambo" class="movie__img">
+      </div>
+      <div class="movie__content">
+        <div class="movie__title">
+          <h1 class="heading__primary">{{blog.title}} <i class="fas fa-fire"></i></h1>
+          <div class="movie__tag movie__tag--1">#action</div>
+          <div class="movie__tag movie__tag--2">#thriller</div>
+        </div>
+        <p class="movie__description">
+          {{blog.description | safe}}
+        </p>
+        <div class="movie__details">
+          <p class="movie__detail"><span class="icons icons-red"><i class="fas fa-user"></i> </span>{{blog.author}}</p>
+          <p class="movie__detail"><i class="fas fa-clock" style="color:gray"></i></p>
+            </span>{{blog.createdDate | timesince}} önce</p>
+        </div>
+      </div>
+      <div class="movie__price">$12.56</div>
+    </figure>
+</div>
+{%endfor%}
+
+{% endblock body %}
