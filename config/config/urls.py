@@ -18,5 +18,5 @@ from django.urls import path
 from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",views.v_homePage,name="homePage")
+    path("",views.v_homePage ,name="homePage")
 ]

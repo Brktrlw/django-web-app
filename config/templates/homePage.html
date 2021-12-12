@@ -1,5 +1,7 @@
 {% extends 'includes/base.html' %}
+{% load static %}
 {%block title%}Anasayfa{% endblock title %}
+
 {% block body%}
 <!-- ***** Preloader Start ***** -->
 <div id="preloader">
@@ -10,36 +12,9 @@
    </div>
 </div>
 <!-- ***** Preloader End ***** -->
+
 <!-- ***** Header Area Start ***** -->
-<header class="header-area header-sticky">
-   <div class="container">
-      <div class="row">
-         <div class="col-12">
-            <nav class="main-nav">
-               <!-- ***** Logo Start ***** -->
-               <a href="#" class="logo">
-               <img src="assets/images/logo.png" alt="Softy Pinko"/>
-               </a>
-               <!-- ***** Logo End ***** -->
-               <!-- ***** Menu Start ***** -->
-               <ul class="nav">
-                  <li><a href="#welcome" class="active">Home</a></li>
-                  <li><a href="#features">About</a></li>
-                  <li><a href="#work-process">Work Process</a></li>
-                  <li><a href="#testimonials">Testimonials</a></li>
-                  <li><a href="#pricing-plans">Pricing Tables</a></li>
-                  <li><a href="#blog">Blog Entries</a></li>
-                  <li><a href="#contact-us">Contact Us</a></li>
-               </ul>
-               <a class='menu-trigger'>
-               <span>Menu</span>
-               </a>
-               <!-- ***** Menu End ***** -->
-            </nav>
-         </div>
-      </div>
-   </div>
-</header>
+{% include 'includes/navbar.html' %}
 <!-- ***** Header Area End ***** -->
 
 
@@ -67,7 +42,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
                             <div class="features-small-item">
                                 <div class="icon">
-                                    <i><img src="assets/images/featured-item-01.png" alt=""></i>
+                                    <i><img src="{% static 'images/featured-item-01.png' %}" alt=""></i>
                                 </div>
                                 <h5 class="features-title">Modern Strategy</h5>
                                 <p>Customize anything in this template to fit your website needs</p>
@@ -79,7 +54,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
                             <div class="features-small-item">
                                 <div class="icon">
-                                    <i><img src="assets/images/featured-item-01.png" alt=""></i>
+                                    <i><img src="{% static 'images/featured-item-01.png' %}" alt=""></i>
                                 </div>
                                 <h5 class="features-title">Best Relationship</h5>
                                 <p>Contact us immediately if you have a question in mind</p>
@@ -91,7 +66,7 @@
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
                             <div class="features-small-item">
                                 <div class="icon">
-                                    <i><img src="assets/images/featured-item-01.png" alt=""></i>
+                                    <i><img src="{% static 'images/featured-item-01.png' %}" alt=""></i>
                                 </div>
                                 <h5 class="features-title">Ultimate Marketing</h5>
                                 <p>You just need to tell your friends about our free templates</p>
@@ -110,7 +85,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                    <img src="assets/images/left-image.png" class="rounded img-fluid d-block mx-auto" alt="App">
+                    <img src="{% static 'images/left-image.png' %}" class="rounded img-fluid d-block mx-auto" alt="App">
                 </div>
                 <div class="col-lg-1"></div>
                 <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
@@ -145,7 +120,8 @@
                 </div>
                 <div class="col-lg-1"></div>
                 <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
-                    <img src="assets/images/right-image.png" class="rounded img-fluid d-block mx-auto" alt="App">
+                    <img src="{% static 'images/right-image.png' %}" class="rounded img-fluid d-block mx-auto" alt="App">
+
                 </div>
             </div>
         </div>
@@ -169,42 +145,42 @@
                 <div class="row">
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                         <a href="#" class="mini-box">
-                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
+                            <i><img src="{% static 'images/work-process-item-01.png' %}" alt=""></i>
                             <strong>Get Ideas</strong>
                             <span>Godard pabst prism fam cliche.</span>
                         </a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                         <a href="#" class="mini-box">
-                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
+                            <i><img src="{% static 'images/work-process-item-01.png' %}" alt=""></i>
                             <strong>Sketch Up</strong>
                             <span>Godard pabst prism fam cliche.</span>
                         </a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                         <a href="#" class="mini-box">
-                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
+                            <i><img src="{% static 'images/work-process-item-01.png' %}" alt=""></i>
                             <strong>Discuss</strong>
                             <span>Godard pabst prism fam cliche.</span>
                         </a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                         <a href="#" class="mini-box">
-                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
+                            <i><img src="{% static 'images/work-process-item-01.png' %}" alt=""></i>
                             <strong>Revise</strong>
                             <span>Godard pabst prism fam cliche.</span>
                         </a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                         <a href="#" class="mini-box">
-                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
+                            <i><img src="{% static 'images/work-process-item-01.png' %}" alt=""></i>
                             <strong>Approve</strong>
                             <span>Godard pabst prism fam cliche.</span>
                         </a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                         <a href="#" class="mini-box">
-                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
+                            <i><img src="{% static 'images/work-process-item-01.png' %}" alt=""></i>
                             <strong>Launch</strong>
                             <span>Godard pabst prism fam cliche.</span>
                         </a>
@@ -239,7 +215,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="team-item">
                         <div class="team-content">
-                            <i><img src="assets/images/testimonial-icon.png" alt=""></i>
+                            <i><img src="{% static 'images/testimonial-icon.png' %}" alt=""></i>
                             <p>Proin a neque nisi. Nam ipsum nisi, venenatis ut nulla quis, egestas scelerisque orci. Maecenas a finibus odio.</p>
                             <div class="user-image">
                                 <img src="http://placehold.it/60x60" alt="">
@@ -257,7 +233,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="team-item">
                         <div class="team-content">
-                            <i><img src="assets/images/testimonial-icon.png" alt=""></i>
+                            <i><img src="{% static 'images/testimonial-icon.png' %}" alt=""></i>
                             <p>Integer molestie aliquam gravida. Nullam nec arcu finibus, imperdiet nulla vitae, placerat nibh. Cras maximus venenatis molestie.</p>
                             <div class="user-image">
                                 <img src="http://placehold.it/60x60" alt="">
@@ -275,7 +251,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="team-item">
                         <div class="team-content">
-                            <i><img src="assets/images/testimonial-icon.png" alt=""></i>
+                            <i><img src="{% static 'images/testimonial-icon.png' %}" alt=""></i>
                             <p>Quisque diam odio, maximus ac consectetur eu, auctor non lorem. Cras quis est non ante ultrices molestie. Ut vehicula et diam at aliquam.</p>
                             <div class="user-image">
                                 <img src="http://placehold.it/60x60" alt="">
@@ -457,7 +433,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="blog-post-thumb">
                         <div class="img">
-                            <img src="assets/images/blog-item-01.png" alt="">
+                            <img src="{% static 'images/blog-item-01.png' %}" alt="">
                         </div>
                         <div class="blog-content">
                             <h3>
@@ -473,7 +449,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="blog-post-thumb">
                         <div class="img">
-                            <img src="assets/images/blog-item-02.png" alt="">
+                            <img src="{% static 'images/blog-item-02.png' %}" alt="">
                         </div>
                         <div class="blog-content">
                             <h3>
@@ -489,7 +465,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="blog-post-thumb">
                         <div class="img">
-                            <img src="assets/images/blog-item-03.png" alt="">
+                            <img src="{% static 'images/blog-item-03.png' %}" alt="">
                         </div>
                         <div class="blog-content">
                             <h3>
