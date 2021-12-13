@@ -6,6 +6,10 @@ class ContactForm(forms.Form):
     Message = forms.CharField(max_length=1000,label="Mesajınız",required=True,widget=forms.Textarea(attrs={"placeholder":"Mesajınız"}))
 
 
-
+    def clean_Name(self):
+        Name = self.cleaned_data.get("Name")
+        if Name=="a":
+            raise forms.ValidationError("Lütfen başka harf giriniz")
+        return Name
 
 
