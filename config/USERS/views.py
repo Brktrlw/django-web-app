@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.contrib.auth import logout
 
+def v_contact(request):
+    return render(request,"homePage.html")
+
 
 def v_login(request):
     return render(request,"login.html")
