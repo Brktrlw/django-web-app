@@ -29,11 +29,7 @@
       </div>
    </div>
 </div>
-
-
-
-
-    <section class="section home-feature">
+<section class="section home-feature">
    <div class="container">
       <div class="row">
          <div class="col-lg-12">
@@ -393,7 +389,6 @@
       </div>
    </div>
 </section>
-
 <!-- ***** Counter Parallax End ***** -->
 <!-- ***** Blog Start ***** -->
 <section class="section" id="blog">
@@ -496,31 +491,20 @@
          <div class="col-lg-8 col-md-6 col-sm-12">
             <div class="contact-form">
                <form id="contact" action="{% url 'homePage' %}" method="post">
-                   {% csrf_token %}
-
+                  {% csrf_token %}
                   <div class="row">
                      {% for field in contactform%}
-                        {% if field.name == 'Message' %}
-                             <div class="col-lg-12">
-                                <fieldset>
-                                   <textarea name="Message" rows="6" class="form-control" id="message" placeholder="Mesajınız" required></textarea>
-                                </fieldset>
-                             </div>
-                        {% else %}
-
-                             <div class="col-lg-6 col-md-12 col-sm-12">
-                                 {% if field.errors %}
-                                {% for error in field.errors  %}
-                                    <span class="text-danger">{{ error }}</span>
-                                {% endfor %}
-                            {% endif %}
-
-                                <fieldset>
-                                   <input name="{{field.name}}" type="text" class="form-control" placeholder="{{field.name}}" required>
-                                </fieldset>
-                             </div>
-
-                        {% endif %}
+                     {% if field.name == 'Message' %}
+                     <div class="col-lg-12">
+                        <fieldset>
+                           {{ field }}
+                        </fieldset>
+                     </div>
+                     {% else %}
+                     <div class="col-lg-6 col-md-12 col-sm-12">
+                        <fieldset>{{ field }}</fieldset>
+                     </div>
+                     {% endif %}
                      {% endfor %}
                      <div class="col-lg-12">
                         <fieldset>
