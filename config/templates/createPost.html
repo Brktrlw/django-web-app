@@ -1,0 +1,53 @@
+{% extends 'includes/base.html' %}
+{% load static %}
+{%block title%}Post Oluştur{% endblock title %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/createPostUtil.css' %}">
+    <link rel="stylesheet" href="{% static 'css/createPostCss.css' %}">
+
+{% endblock %}
+{% block body%}
+    {% include 'includes/navbar.html' %}
+
+
+    <div class="bg-contact2">
+		<div class="container-contact2">
+			<div class="wrap-contact2">
+				<form class="contact2-form validate-form" method="post">
+                    {% csrf_token %}
+					<span class="contact2-form-title">
+						Blog Oluştur
+					</span>
+
+					<div class="wrap-input2 validate-input" data-validate="Blog başlığı zorunludur.">
+						<input class="input2" type="text" name="name">
+						<span class="focus-input2" data-placeholder="Blog Başlığı"></span>
+					</div>
+
+
+
+					<div class="wrap-input2 validate-input" data-validate = "Blog içeriği girilmesi zorunludur">
+						<textarea class="input2" name="message"></textarea>
+						<span class="focus-input2" data-placeholder="Blog İçeriği"></span>
+					</div>
+
+					<div class="container-contact2-form-btn">
+						<div class="wrap-contact2-form-btn">
+							<div class="contact2-form-bgbtn"></div>
+							<button class="contact2-form-btn">
+								Paylaş
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+
+    <script src="{% static 'js/createPost.js' %}"></script>
+
+   {# {% include 'includes/footer.html' %}#}
+{% endblock %}

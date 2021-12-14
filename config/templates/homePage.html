@@ -1,8 +1,6 @@
 {% extends 'includes/base.html' %}
 {% load static %}
 {%block title%}Anasayfa{% endblock title %}
-{% block body%}
-<!-- ***** Preloader Start ***** -->
 <div id="preloader">
    <div class="jumper">
       <div></div>
@@ -10,6 +8,9 @@
       <div></div>
    </div>
 </div>
+{% block body%}
+<!-- ***** Preloader Start ***** -->
+
 <!-- ***** Preloader End ***** -->
 <!-- ***** Header Area Start ***** -->
 {% include 'includes/navbar.html' %}
